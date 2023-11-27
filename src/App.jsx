@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <Header />
-      <h1 className="text-3xl font-bold text-red-500">Hej på dig</h1>
+      <h1 className="w-full h-screen text-3xl text-red-500">Hej på dig App</h1>
     </div>
   );
 }

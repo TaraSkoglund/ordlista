@@ -3,7 +3,7 @@ function Header() {
 
   return (
     <header>
-      <h1 className="text-">Hej</h1>
+      <h1 className="text-2xl text-red-600">Header</h1>
     </header>
   );
 }
