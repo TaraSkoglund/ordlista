@@ -7,7 +7,7 @@ function Header() {
         <Search className="text-sm p-1" />
         <input
           type="text"
-          placeholder=" Search"
+          placeholder="Search"
           className=" bg-red-800 text-black w-96 placeholder:text-black focus:outline-none"
         />
       </label>
