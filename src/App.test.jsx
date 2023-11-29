@@ -1,11 +1,14 @@
-import { describe, expect, it } from "vitest";
+import axios from "axios";
+import { expect, it } from "vitest";
 
-describe("something truthy and falsy", () => {
-  it("true to be true", () => {
-    expect(true).toBe(true);
-  });
+it("should search for a word", async () => {
+  const searchTerm = "hello"; // Ord att söka efter
 
-  it("false to be false", () => {
-    expect(false).toBe(false);
-  });
+  // Simulera sökfunktionaliteten
+  const response = await axios.get(
+    `https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`
+  );
+
+  // AVerifiera att API-anropet var framgångsrikt (statuskod 200)
+  expect(response.status).toBe(200);
 });
