@@ -18,7 +18,7 @@ function Header({ onSearchResult }) {
   };
 
   return (
-    <header className="font-serif w-screen h-14 bg-red-800 flex items-center gap-6 p-8">
+    <header className="font-serif w-screen h-14 flex items-center gap-6 p-8">
       <h1 className="text-3xl pb-2">Q</h1>
       <label
         htmlFor="search"
@@ -27,7 +27,7 @@ function Header({ onSearchResult }) {
         <input
           type="text"
           placeholder="What do you wanna know"
-          className="bg-red-800 text-black w-96 placeholder:text-black focus:outline-none p-1"
+          className="text-black w-96 placeholder:text-black focus:outline-none p-1"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />

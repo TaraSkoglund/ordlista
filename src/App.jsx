@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <Header onSearchResult={handleSearchResult} />
-      <div className="w-full h-screen bg-red-800 p-12 flex justify-center gap-4">
+      <div className="w-full h-screen p-12 flex justify-center gap-4">
         {/* Skicka sökresultatet som en prop till Result */}
         <Result searchResult={searchResult} />
       </div>

@@ -2,10 +2,12 @@ import React from "react";
 
 function Result({ searchResult }) {
   return (
-    <div className="font-serif max-w-md h-max border-2 border-black rounded p-2">
+    <div>
       {searchResult && (
-        <>
-          <h1 className="font-semibold text-xl pb-6">{searchResult[0].word}</h1>
+        <div className="font-serif max-w-2xl h-max border-2 border-black rounded p-2 flex flex-col gap-4">
+          <h1 className="font-semibold text-2xl pb-4">
+            {searchResult[0].word}
+          </h1>
           {searchResult[0].phonetics && searchResult[0].phonetics[0].audio && (
             <audio controls>
               <source
@@ -18,17 +20,17 @@ function Result({ searchResult }) {
           {searchResult[0].meanings &&
             searchResult[0].meanings.map((meaning, index) => (
               <div key={index}>
-                <p className="pb-2">{meaning.partOfSpeech}</p>
+                <p className="pb-3">{meaning.partOfSpeech}</p>
                 {meaning.definitions &&
                   meaning.definitions.map((definition, index) => (
                     <div key={index}>
-                      <p>{definition.definition}</p>
-                      <p>Example: {definition.example}</p>
+                      <p className="pb-3">{definition.definition}</p>
+                      <p className="pb-3">{definition.example}</p>
                     </div>
                   ))}
               </div>
             ))}
-        </>
+        </div>
       )}
     </div>
   );
