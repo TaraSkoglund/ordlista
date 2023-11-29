@@ -1,10 +1,13 @@
+// Result.js - Visar sökresultatet från API-anropet
 import React from "react";
 
 function Result({ searchResult }) {
   return (
     <div>
+      {/* Om det finns sökresultat */}
       {searchResult && (
         <div className="font-serif max-w-2xl h-max border-2 border-black rounded p-2 flex flex-col gap-4">
+          {/* Visa ordet, fonetisk information och definitioner */}
           <h1 className="font-semibold text-2xl pb-4">
             {searchResult[0].word}
           </h1>
@@ -21,6 +24,7 @@ function Result({ searchResult }) {
             searchResult[0].meanings.map((meaning, index) => (
               <div key={index}>
                 <p className="pb-3">{meaning.partOfSpeech}</p>
+                {/* Visa definition och exempel för varje betydelse */}
                 {meaning.definitions &&
                   meaning.definitions.map((definition, index) => (
                     <div key={index}>

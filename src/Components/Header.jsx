@@ -1,3 +1,4 @@
+// Header.js - Hanterar sökfältet och API-anropet
 import axios from "axios";
 import { Search } from "lucide-react";
 import React, { useState } from "react";
@@ -8,6 +9,7 @@ function Header({ onSearchResult }) {
 
   const handleSearch = async () => {
     try {
+      // Gör API-anrop för att hämta sökresultatet
       const response = await axios.get(`${apiUrl}${searchTerm}`);
       // Anropa onSearchResult-funktionen för att skicka sökresultatet tillbaka till App-komponenten
       onSearchResult(response.data);
@@ -24,6 +26,7 @@ function Header({ onSearchResult }) {
         htmlFor="search"
         className="border-2 border-black rounded flex px-1"
       >
+        {/* Sökinmatning och sökknapp */}
         <input
           type="text"
           placeholder="What do you wanna know"
