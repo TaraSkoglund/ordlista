@@ -6,7 +6,7 @@ function Result({ searchResult }) {
     <div>
       {/* Om det finns sökresultat */}
       {searchResult && (
-        <div className="font-serif max-w-2xl h-max border-2 border-black rounded p-2 flex flex-col gap-4">
+        <div className="font-serif max-w-2xl h-max border-2 border-black rounded p-2 flex flex-col gap-3">
           {/* Visa ordet, fonetisk information och definitioner */}
           <h1 className="font-semibold text-2xl pb-4">
             {searchResult[0].word}
