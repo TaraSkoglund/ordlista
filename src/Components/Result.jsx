@@ -23,7 +23,9 @@ function Result({ searchResult }) {
           {searchResult[0].meanings &&
             searchResult[0].meanings.map((meaning, index) => (
               <div key={index}>
-                <p className="pb-3">{meaning.partOfSpeech}</p>
+                <p className="pb-3 font-semibold text-lg">
+                  {meaning.partOfSpeech}:
+                </p>
                 {/* Visa definition och exempel för varje betydelse */}
                 {meaning.definitions &&
                   meaning.definitions.map((definition, index) => (
